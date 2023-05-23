@@ -53,7 +53,6 @@ export default function Card(props) {
         setTempImage({ name: null, file: null });
       })
       .catch((err) => {
-        console.log(err.response.data.errors);
         setErrors(err.response.data.errors);
       });
   }
@@ -264,7 +263,7 @@ export default function Card(props) {
                                 setTitle(e.target.value);
                               }}
                             />
-                            {errors.title ? (
+                            {errors?.title ? (
                               <p className="text-red-500 text-sm">
                                 {errors.title}
                               </p>
@@ -344,7 +343,7 @@ export default function Card(props) {
                               </p>
                             </div>
                           </label>
-                          {errors.image ? (
+                          {errors?.image ? (
                             <p className="text-red-500 text-sm">
                               {errors.image}
                             </p>

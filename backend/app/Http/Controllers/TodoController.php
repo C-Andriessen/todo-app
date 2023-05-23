@@ -73,14 +73,17 @@ class TodoController extends Controller
         $todo->status = $request->status;
         if ($request->image)
         {
-            unlink(public_path('/images/' . $todo->image));
+            if ($todo->image)
+            {
+                unlink(public_path('/images/' . $todo->image));
+            }
             $imageName = time() . '.' . $request->image->extension();
             $request->image->move(public_path('images'), $imageName);
             $todo->image = $imageName;
         }
         $todo->save();
 
-        return $todo;
+        return $id;
     }
 
     /**
