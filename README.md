@@ -5,6 +5,10 @@ Fill in the .env file with all the database connection data.
 Run the following commands to get the server started:
 
 ```bash
+$ composer install
+```
+
+```bash
 $ php artisan migrate
 ```
 

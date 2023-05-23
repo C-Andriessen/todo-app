@@ -18,7 +18,7 @@ export default function CreateCardModal(props) {
     } else if (props.status === 2) {
       setType("Done");
     }
-  }, []);
+  }, [props.status]);
 
   const cancelButtonRef = useRef(null);
 
