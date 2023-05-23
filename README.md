@@ -33,3 +33,6 @@ $ npm run start
 ```
 
 Go to the link in the terminal and the whole app should be up and running.
+
+> **Note:** <br />
+> The env file in the clientside folder is not ignored in this todo app because there is no valuable data stored in it
